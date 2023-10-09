@@ -1,0 +1,51 @@
+{
+    "appId": "com.client.im",
+    "electronVersion": "21.2.0",
+    "directories": {
+      "output": "output",
+      "app": "dist"
+    },
+    "publish": [
+      {
+        "provider": "generic",
+        "url":""
+      }
+    ],
+    "extends": null,
+    "win": {
+      "verifyUpdateCodeSignature": false,
+      "signingHashAlgorithms": ["sha1", "sha256"],
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["ia32"]
+        }
+      ],
+      "icon": "packages/client/build/client256.ico"
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "icon": "packages/client/build/client512.ico"
+    },
+    "dmg": {
+      "icon": "packages/client/build/client512.ico",
+      "title": "client"
+    },
+    "nsis": {
+      "artifactName": "${productName}-${version}.${ext}",
+      "oneClick": false,
+      "perMachine": true,
+      "allowElevation": false,
+      "allowToChangeInstallationDirectory": true,
+      "runAfterFinish": true,
+      "installerIcon": "packages/client/build/client256.ico",
+      "uninstallerIcon": "packages/client/build/client256.ico",
+      "displayLanguageSelector": false,
+      "installerLanguages": ["zh_CN"],
+      "createDesktopShortcut": "always",
+      "shortcutName": "client"
+    }
+  }

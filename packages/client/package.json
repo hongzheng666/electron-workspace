@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "tsc": "tsc",
-    "dev": "pnpm tsc && electron ."
+    "dev": "tsc && env-cmd -f .env.dev pnpm electron .",
+    "build": "rimraf ./dist && pnpm tsc && node ./build/create-package-json.js"
   },
   "keywords": [],
   "author": "",

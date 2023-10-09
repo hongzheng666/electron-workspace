@@ -12,7 +12,12 @@ export const createMainWindow = () => {
             nodeIntegrationInWorker: true, // 支持webworker
         }
     });
-    win.loadURL('http://localhost:5173');
+    console.log('process.env', process.env.NODE_ENV)
+    if (process.env.NODE_ENV === 'development') {
+        win.webContents.loadURL("http://localhost:5173/");
+    } else {
+        win.webContents.loadFile("./dist/index.html");
+    }
 
     win.once("ready-to-show", () => {
         win.show();

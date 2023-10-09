@@ -2,10 +2,14 @@
   "name": "monorepo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "tsc": "tsc",
-    "dev": "concurrently \"cd packages/web && pnpm dev\" \"cd packages/client && pnpm dev\""
+    "dev": "concurrently \"cd packages/web && pnpm dev\" \"cd packages/client && pnpm dev\"",
+    "build": "concurrently \"cd packages/web && pnpm build\" \"cd packages/client && pnpm build\"",
+    "rimraf": "rimraf dist",
+    "mv": "concurrently \"mv packages/client/dist ./dist\" \"mv packages/web/dist ./dist\"",
+    "package": "concurrently \"env-cmd -f packages/client/.env.production electron-builder -c packages/client/builder.json\""
   },
   "keywords": [],
   "author": "",
@@ -13,6 +17,10 @@
   "devDependencies": {
     "concurrently": "^8.2.1",
     "electron": "^26.3.0",
+    "electron-builder": "^24.6.4",
+    "env-cmd": "^10.1.0",
+    "mv": "^2.1.1",
+    "rimraf": "^5.0.5",
     "typescript": "^5.2.2"
   }
 }
