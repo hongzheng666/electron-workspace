@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Electron debug",
+            "request": "launch",
+            "runtimeArgs": ["run-script", "dev"],
+            "runtimeExecutable": "pnpm",
+            "skipFiles": ["<node_internals>/**"],
+            "type": "node"
+        }
+    ]
+}
