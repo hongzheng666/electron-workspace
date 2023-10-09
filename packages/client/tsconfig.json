@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+        "target": "ES2019",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "allowJs": false,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "strict": true,
+        "module": "CommonJS",
+        "moduleResolution": "node",
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "isolatedModules": false,
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "noImplicitThis": false,
+        "noImplicitAny": false,
+        "declaration": true,
+        "baseUrl": "./",
+        "outDir": "./dist",
+        "rootDir": "./src",
+        // "declarationDir": "./lib",
+        "paths": {
+            "@/*": ["./src/*"],
+            // "electron": ["./node_modules/electron/electron.d.ts"]
+        }
+    },
+    // "typeRoots": ["./typings", "./node_modules/@types"],
+    "include": ["./src/**/*"],
+    "exclude": ["../../node_modules/**/*"]
+    
+}
