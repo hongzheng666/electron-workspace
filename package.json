@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "tsc": "tsc",
-    "dev": "concurrently \"cd packages/client && pnpm dev\""
+    "dev": "concurrently \"cd packages/web && pnpm dev\" \"cd packages/client && pnpm dev\""
   },
   "keywords": [],
   "author": "",
