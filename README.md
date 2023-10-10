@@ -14,10 +14,10 @@ pnpm dev
 pnpm package
 ```
 
-pnpm workspace参考：
+pnpm workspace参考：  
 https://juejin.cn/post/7098609682519949325  
-https://juejin.cn/post/7240793907633782845?searchId=202310081035527814B860175131EADA81
-https://hongbusi.com/posts/best-practices-for-monorepos/
+https://juejin.cn/post/7240793907633782845?searchId=202310081035527814B860175131EADA81  
+https://hongbusi.com/posts/best-practices-for-monorepos/ 
 
 
 # 创建项目目录结构
