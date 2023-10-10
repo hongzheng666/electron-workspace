@@ -1,29 +1,50 @@
 # electron-workspace
 关键字：electron pnpm workspace ts
+# 项目介绍
+  packages下有两个项目，client为electron客户端项目，客户端嵌套了web项目（vue3）  
 
-参考：
+#运行项目
+```javascript
+pnpm install
+pnpm dev
+```
+
+#打包
+```javascript
+pnpm package
+```
+
+pnpm workspace参考：
 
 https://juejin.cn/post/7240793907633782845?searchId=202310081035527814B860175131EADA81
 https://hongbusi.com/posts/best-practices-for-monorepos/
 
-创建项目目录monorepo
-pnpm init 创建package.json
-创建pnpm-workspace.yaml
+
+# 创建项目目录结构
+
+* 创建项目目录monorepo
+* pnpm init 创建package.json
+* 创建pnpm-workspace.yaml
+
+```javascript
 packages:
   - packages/*
-创建packages根目录，其下创建两个项目目录web、client
-分别在web、client下pnpm init
+```
 
-安装依赖
-# 全局安装 -w: --workspace-root
-pnpm add typescript -D -w
+创建packages根目录，  
+其下创建两个项目目录web、client  
+分别在web、client下pnpm init  
 
-pnpm add electron -wD
+# 安装依赖
+1. 全局安装 -w: --workspace-root
+  - pnpm add typescript -D -w
 
-# 局部安装
-pnpm add vite @vitejs/plugin-vue -D --filter web
+  - pnpm add electron -wD
 
-pnpm add vue --filter web
+2. 局部安装
+  - pnpm add vite @vitejs/plugin-vue -D --filter web
 
-# 互相安装
-pnpm add web -D --workspace --filter client
+  - pnpm add vue --filter web
+
+3. 互相安装(client项目依赖web项目, 此处没有这种依赖，只是举个例子，不要执行以下命令)
+  - pnpm add web -D --workspace --filter client
