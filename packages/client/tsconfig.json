@@ -6,7 +6,7 @@
         "skipLibCheck": true,
         "esModuleInterop": true,
         "strict": true,
-        "module": "CommonJS",
+        "module": "ESNext",
         "moduleResolution": "node",
         "forceConsistentCasingInFileNames": true,
         "resolveJsonModule": true,
