@@ -3,6 +3,8 @@
 # 项目介绍
   packages下有两个项目，client为electron客户端项目，客户端嵌套了web项目（vue3）  
 
+[gitee上有每次变动的分支时间，展示了项目开发过程](https://gitee.com/TuDi/electron-workspace)  
+
 #运行项目
 ```javascript
 pnpm install
@@ -14,11 +16,12 @@ pnpm dev
 pnpm package
 ```
 
-pnpm workspace参考：  
-https://juejin.cn/post/7098609682519949325  
-https://juejin.cn/post/7240793907633782845?searchId=202310081035527814B860175131EADA81  
-https://hongbusi.com/posts/best-practices-for-monorepos/ 
+pnpm workspace rollup参考：  
+  - https://juejin.cn/post/7098609682519949325  
+  - https://juejin.cn/post/7240793907633782845?searchId=202310081035527814B860175131EADA81  
+  - https://hongbusi.com/posts/best-practices-for-monorepos/ 
 
+[rollup参考](https://juejin.cn/post/7267167108609310783#heading-19)
 
 # 创建项目目录结构
 
