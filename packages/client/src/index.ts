@@ -34,5 +34,5 @@ app.on("render-process-gone", (event, webContents, details) => {
 
 // 只有显式调用quit才退出系统，区分MAC系统程序坞退出和点击X关闭退出
 app.on("before-quit", () => {
-  gMap.set("force_quit", true);
+  gMap.set("forceQuit", true);
 });

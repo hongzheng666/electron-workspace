@@ -5,6 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "dev": "concurrently \"cd packages/web && pnpm dev\" \"cd packages/client && pnpm dev\"",
+    "dev:main": "cd packages/client && pnpm dev",
+    "dev:web": "cd packages/web && pnpm dev",
     "build": "concurrently \"cd packages/web && pnpm build\" \"cd packages/client && pnpm build\"",
     "rimraf": "rimraf dist",
     "mv": "rimraf dist && concurrently \"mv packages/client/dist dist\" \"mv packages/web/dist dist\"",
